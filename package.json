@@ -3,7 +3,7 @@
   "publisher": "GateaDavid",
   "displayName": "Assembly Runner",
   "description": "Run Assembly code in OllyDbg",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "icon": "images/logo.png",
   "engines": {
     "vscode": "^1.83.0"
