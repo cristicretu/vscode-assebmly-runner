@@ -66,7 +66,7 @@ export function activate(context: vscode.ExtensionContext) {
 			vscode.window.showInformationMessage(`Saved executable path: ${executablePath}`);
 			
 		} 
-		return parentDir;
+		return executablePath;
 	};
 	
 	const setRunningState = (isRunning: boolean) => {
@@ -174,7 +174,6 @@ export function activate(context: vscode.ExtensionContext) {
 	const debug = vscode.commands.registerCommand('asm.debug', async () => {
 		await stopDebugging();
 		var executablePath = await getExecutablePath();
-		console.log(executablePath);
 		if (executablePath === undefined || executablePath === '') {
 			vscode.window.showInformationMessage('No executable path set!');
 			return;
